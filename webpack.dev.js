@@ -1,11 +1,11 @@
-const path = require("path")
-const webpack = require("webpack")
-const HtmlWebpackPlugin = require("html-webpack-plugin")
-module.exports = {
-    entry: "./src/client/index.js",
-    // 并没有这js，我要创建一个
+const path = require('path')
+const webpack = require('webpack')
+const HtmlWebPackPlugin = require("html-webpack-plugin")
 
-    mode: "development",
+module.exports = {
+    entry: './src/client/index.js',
+    mode: 'development',
+    devtool: 'source-map',
     module: {
         rules: [
             //添加一个规则：
@@ -19,12 +19,10 @@ module.exports = {
             }
         ]
     },
-
     plugins: [
-        new HtmlWebpackPlugin({
+        new HtmlWebPackPlugin({
             template: "./src/client/views/index.html",
-            filename: "index.html"
+            filename: "./index.html",
         })
     ]
 }
-
