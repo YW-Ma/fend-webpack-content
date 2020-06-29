@@ -6,6 +6,10 @@ module.exports = {
 
     module: {
         rules: [
+            //添加一个规则：
+            // 从entry point出发，
+            // 对依赖关系中，所有不在node_modules里面的js文件
+            // 都利用babel-loader装载器来预处理
                 {
             test: '/\.js$/',
             exclude: /node_modules/,
