@@ -1,5 +1,6 @@
 const path = require("path")
 const webpack = require("webpack")
+const HtmlWebpackPlugin = require("html-webpack-plugin")
 module.exports = {
     entry: "./src/client/index.js",
     // 并没有这js，我要创建一个
@@ -16,6 +17,13 @@ module.exports = {
                 loader: "babel-loader"
             }
         ]
-    }
+    },
+
+    plugins: [
+        new HtmlWebpackPlugin({
+            template: "./src/client/views/index.html",
+            filenmae: "./index.html"
+        })
+    ]
 }
 
