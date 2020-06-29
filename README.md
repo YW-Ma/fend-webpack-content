@@ -25,3 +25,9 @@ git clone -- git@github.com:[your-user-name]/webpack-express.git --
 - ```npm install```
 - ```npm start``` to start the app
 - this app runs on localhost:8080, but you can of course edit that in index.js
+
+## NOTICE
+1. ./xxx == xxx in all filename
+2. [EN] In server side, directories passing to express.static and sendFile are relative to the directory we start the node progress. So an absolute path is more safe.
+express.static(__dirname + '/public')
+2. [CH] 在服务端，输入到express.static和sendFile的相对路径是相对于node进程的启动目录的。因此，提供绝对路径更加安全。express.static(__dirname + '/public')
